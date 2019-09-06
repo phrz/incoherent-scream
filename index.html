@@ -8,64 +8,94 @@
 				box-sizing: border-box;
 			}
 			@font-face {
-				font-family: incscr_inter;
-				src: url('fonts/Inter-Regular.woff2') format('woff2'),
-				url('fonts/Inter-Regular.woff') format('woff');
-				font-weight: normal;
+				font-family: 'Inter';
+				font-style:  normal;
+				font-weight: 400;
+				font-display: swap;
+				src: url("fonts/Inter-Regular.woff2") format("woff2"),
+				     url("fonts/Inter-Regular.woff") format("woff");
+			}
+			@font-face {
+				font-family: 'Inter';
+				font-style:  normal;
+				font-weight: 800;
+				font-display: swap;
+				src: url("fonts/Inter-ExtraBold.woff2") format("woff2"),
+				     url("fonts/Inter-ExtraBold.woff") format("woff");
 			}
 			html, body {
 				width: 100%;
 				height: 100%;
-				font-family: incscr_inter;
+				font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
 				margin: 0;
-				overflow: hidden;
 			}
 			body {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				align-items: center;
-			}
-			.title {
-				height: 100px;
-				display: block;
-				position: relative;
-			}
-			.incoherent {
-				top: -15px;
-			}
-			.scream {
-				top: 15px;
-			}
-			.hero {
-				width: 100%;
-				background-color: #FF5400;
-				padding: 20px;
-				text-align: center;
-			}
-			.call-to-action {
+				padding: 30px;
+				background-color: #4600ff;
 				color: #fff;
 			}
-			.call-to-action h1 {
-				margin: 0.5rem;
-				font-weight: normal;
+			.title {
+				margin: 0;
+				word-wrap: break-word;
+				line-height: 66%;
+				display: inline;
+				font-weight: 800;
+				font-size: 20vw;
 			}
-			.detail {
-				margin: 0.9rem;
+			.events {
+				list-style-type: none;
+				margin: 0;
+				padding: 10px 0;
+			}
+			.events li {
+				display: block;
+			}
+			.event-description {
+				color: rgba(255,255,255,0.65);
+				padding: 0 0.25em 0 0;
+			}
+			.call-to-action {
+				font-weight: 800;
+				color: #000;
+				background: #FF5400;
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 0.1em 0.3em;
+			}
+			.call-to-action:active, .call-to-action:hover {
+				background: #000;
+				color: #fff;
 			}
 			@media only screen and (min-width: 800px) {
-				.hero {
-					font-size: 50pt;
+				.title {
+					/*font-size: 150pt;*/
+				}
+				.events {
+					display: inline-block;
+					padding: 0 10px 0;
 				}
 			}
 		</style>
 	</head>
 	<body>
-		<img src="img/incoherent.svg" class="title incoherent">
-		<section class="hero">
-			<a class="call-to-action" href="https://www.ticketmob.com/integrate/event.cfm?originURL=https%3A%2F%2Fwww%2Edallascomedyhouse%2Ecom%2Fshows&siteID=522&brandProperty=LS&cart&showTimingID=523481"><h1>Buy tickets -></h1></a>
-			<p class="detail">Dallas Comedy House<br>March 3 @ 7PM</p>
-		</section>
-		<img src="img/scream.svg" class="title scream">
+		<h1 class="title" aria-label="Incoherent Scream">IncoherentScream</h1>
+		<ul class="events">
+			<li>
+				<span aria-label="Win">🏆</span>
+				<span class="event-date">August 29</span>
+				<span class="event-description">King of the Mountain</span>
+			</li>
+			<li>
+				<span aria-label="Win">🏆</span>
+				<span class="event-date">September 5</span>
+				<span class="event-description">King of the Mountain</span>
+			</li>
+			<li>
+				<span aria-label="Upcoming show">🎟</span>
+				<span class="event-date">September 12</span>
+				<span class="event-description">King of the Mountain</span>
+				<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountainQEeKmgq" target="blank">Buy</a>
+			</li>
+		</ul>
 	</body>
 </html>

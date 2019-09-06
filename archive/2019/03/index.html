@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>[Incoherent Scream]</title>
+		<meta charset="utf-8">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			@font-face {
+				font-family: incscr_inter;
+				src: url('fonts/Inter-Regular.woff2') format('woff2'),
+				url('fonts/Inter-Regular.woff') format('woff');
+				font-weight: normal;
+			}
+			html, body {
+				width: 100%;
+				height: 100%;
+				font-family: incscr_inter;
+				margin: 0;
+				overflow: hidden;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.title {
+				height: 100px;
+				display: block;
+				position: relative;
+			}
+			.incoherent {
+				top: -15px;
+			}
+			.scream {
+				top: 15px;
+			}
+			.hero {
+				width: 100%;
+				background-color: #FF5400;
+				padding: 20px;
+				text-align: center;
+			}
+			.call-to-action {
+				color: #fff;
+			}
+			.call-to-action h1 {
+				margin: 0.5rem;
+				font-weight: normal;
+			}
+			.detail {
+				margin: 0.9rem;
+			}
+			@media only screen and (min-width: 800px) {
+				.hero {
+					font-size: 50pt;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/incoherent.svg" class="title incoherent">
+		<section class="hero">
+			<a class="call-to-action" href="https://www.ticketmob.com/integrate/event.cfm?originURL=https%3A%2F%2Fwww%2Edallascomedyhouse%2Ecom%2Fshows&siteID=522&brandProperty=LS&cart&showTimingID=523481"><h1>Buy tickets -></h1></a>
+			<p class="detail">Dallas Comedy House<br>March 3 @ 7PM</p>
+		</section>
+		<img src="img/scream.svg" class="title scream">
+	</body>
+</html>
