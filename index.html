@@ -34,8 +34,6 @@
 			body {
 				background-color: #4600ff;
 				color: #fff;
-			}
-			.content {
 				padding: 30px 30px 80px;
 			}
 			.title {
@@ -77,20 +75,6 @@
 				background: #000;
 				color: #fff;
 			}
-			.marquee {
-				width: 100%;
-				position: fixed;
-				bottom: 0;
-				background: #FF5400;
-				color: black;
-				padding: 1em 0;
-			}
-			.marquee span {
-				display: inline-block;
-				padding-left: 100%;
-				animation: marquee 20s linear infinite;
-				white-space: nowrap;
-			}
 			.arrow {
 				word-wrap: break-word;
 			}
@@ -122,41 +106,27 @@
 					font-size: 1.5em;
 				}
 			}
-			@keyframes marquee {
-				0% {
-					transform: translate(0, 0);
-				}
-				100% {
-					transform: translate(-100%, 0);
-				}
-			}
-
 		</style>
 	</head>
 	<body>
-		<main class="content">
-			<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
-			<ul class="events">
-				<li>
-					<span aria-label="Win">🏆</span>
-					<span class="event-date">August 29</span>
-					<span class="event-description">King of the Mountain</span>
-				</li>
-				<li>
-					<span aria-label="Win">🏆</span>
-					<span class="event-date">September 5</span>
-					<span class="event-description">King of the Mountain</span>
-				</li>
-				<li>
-					<span aria-label="Upcoming show">🎟</span>
-					<span class="event-date">September 12</span>
-					<span class="event-description">King of the Mountain</span>
-				</li>
-			</ul>
-			<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountainQEeKmgq" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
-		</main>
-		<div class="marquee">
-			<span>[Incoherent Scream] is an improv comedy group performing at the Dallas Comedy House (they're pretty good). The venue is at 3036 Elm St. You can buy tickets online or in person (they're pretty cheap).</span>
-		</div>
+		<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
+		<ul class="events">
+			<li>
+				<span aria-label="Win">🏆</span>
+				<span class="event-date">August 29</span>
+				<span class="event-description">King of the Mountain</span>
+			</li>
+			<li>
+				<span aria-label="Win">🏆</span>
+				<span class="event-date">September 5</span>
+				<span class="event-description">King of the Mountain</span>
+			</li>
+			<li>
+				<span aria-label="Upcoming show">🎟</span>
+				<span class="event-date">September 12</span>
+				<span class="event-description">King of the Mountain</span>
+			</li>
+		</ul>
+		<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountainQEeKmgq" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
 	</body>
 </html>
