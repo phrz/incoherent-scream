@@ -31,72 +31,131 @@
 				margin: 0;
 			}
 			body {
-				padding: 30px;
 				background-color: #4600ff;
 				color: #fff;
 			}
+			.content {
+				padding: 30px 30px 80px;
+			}
 			.title {
 				margin: 0;
-				word-wrap: break-word;
+				white-space: nowrap;
 				line-height: 66%;
 				display: inline;
 				font-weight: 800;
-				font-size: 20vw;
+				font-size: 22vw;
 			}
 			.events {
 				list-style-type: none;
-				margin: 0;
-				padding: 10px 0;
+				margin: 1em 0 0;
+				padding: 0;
 			}
 			.events li {
 				display: block;
+				margin: 1em 0 0;
 			}
 			.event-description {
 				color: rgba(255,255,255,0.65);
 				padding: 0 0.25em 0 0;
+				display: block;
 			}
-			.call-to-action {
+			.call-to-action, .marquee span {
 				font-weight: 800;
 				color: #000;
 				background: #FF5400;
-				text-decoration: none;
 				text-transform: uppercase;
-				padding: 0.1em 0.3em;
+			}
+			.call-to-action {
+				max-width: 300px;
+				text-decoration: none;
+				display: block;
+				margin: 0.5em 0 0.2vw;
+				padding: 1em;
 			}
 			.call-to-action:active, .call-to-action:hover {
 				background: #000;
 				color: #fff;
 			}
-			@media only screen and (min-width: 800px) {
-				.title {
-					/*font-size: 150pt;*/
+			.marquee {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				background: #FF5400;
+				color: black;
+			}
+			.marquee span {
+				display: inline-block;
+				padding-left: 100%;
+				animation: marquee 20s linear infinite;
+				white-space: nowrap;
+				padding: 1em;
+			}
+			.arrow {
+				word-wrap: break-word;
+			}
+			@media only screen and (min-width: 400px) {
+				.event-description {
+					display: inline;
 				}
-				.events {
-					display: inline-block;
-					padding: 0 10px 0;
+				.events li {
+					margin: 0;
 				}
 			}
+			@media only screen and (min-width: 800px) {
+				.events {
+					display: inline-block;
+					padding: 0 0 0 10px;
+				}
+				.call-to-action {
+					display: inline-flex;
+					text-align: center;
+					width: 110px;
+					height: 110px;
+					border-radius: 50%;
+					vertical-align: bottom;
+					justify-content: center;
+					flex-direction: column;
+					transform: rotate(-10deg);
+				}
+				.call-to-action .arrow {
+					font-size: 1.5em;
+				}
+			}
+			@keyframes marquee {
+				0% {
+					transform: translate(0, 0);
+				}
+				100% {
+					transform: translate(-100%, 0);
+				}
+			}
+
 		</style>
 	</head>
 	<body>
-		<h1 class="title" aria-label="Incoherent Scream">IncoherentScream</h1>
-		<ul class="events">
-			<li>
-				<span aria-label="Win">🏆</span>
-				<span class="event-date">August 29</span>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-			<li>
-				<span aria-label="Win">🏆</span>
-				<span class="event-date">September 5</span>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-			<li>
-				<span aria-label="Upcoming show">🎟</span>
-				<span class="event-date">September 12</span>
-				<span class="event-description">King of the Mountain</span>
-				<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountainQEeKmgq" target="blank">Buy</a>
-			</li>
-		</ul>
+		<main class="content">
+			<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
+			<ul class="events">
+				<li>
+					<span aria-label="Win">🏆</span>
+					<span class="event-date">August 29</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+				<li>
+					<span aria-label="Win">🏆</span>
+					<span class="event-date">September 5</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+				<li>
+					<span aria-label="Upcoming show">🎟</span>
+					<span class="event-date">September 12</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+			</ul>
+			<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountainQEeKmgq" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
+		</main>
+		<div class="marquee">
+			<span>[Incoherent Scream] is an improv comedy group performing at the Dallas Comedy House (they're pretty good). The venue is at 3036 Elm St. You can buy tickets online or in person (they're pretty cheap).</span>
+		</div>
 	</body>
 </html>
