@@ -34,10 +34,17 @@
 				margin: 0;
 			}
 			body {
-				background-color: #4600ff;
-				color: #fff;
-				padding: 30px;
-				height: auto;
+				background-color: #fff;
+				color: #000;
+				padding: 30px 30px 80px;
+			}
+			.bg {
+				background-image: url('img/team.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+
+				background-clip: text;
+				-webkit-background-clip: text;
 			}
 			.title {
 				margin: 0;
@@ -46,6 +53,8 @@
 				display: inline;
 				font-weight: 800;
 				font-size: 22vw;
+
+				color: transparent;
 			}
 			.events {
 				list-style-type: none;
@@ -57,20 +66,21 @@
 				margin: 1em 0 0;
 			}
 			.event-description {
-				color: rgba(255,255,255,0.65);
+				color: rgba(0,0,0,0.5);
 				padding: 0 0.25em 0 0;
 				display: block;
 			}
 			.call-to-action {
 				font-weight: 800;
 				color: #000;
-				background: #FF5400;
+				background: #fff;
 				text-transform: uppercase;
 				max-width: 300px;
 				text-decoration: none;
 				display: block;
-				margin: 1em 0 0.2vw;
+				margin: 0.5em 0 0.2vw;
 				padding: 1em;
+				border: 2px solid black;
 			}
 			.call-to-action:active, .call-to-action:hover {
 				background: #000;
@@ -102,7 +112,6 @@
 					justify-content: center;
 					flex-direction: column;
 					transform: rotate(-10deg);
-					margin-top: 0;
 				}
 				.call-to-action .arrow {
 					font-size: 1.5em;
@@ -111,34 +120,31 @@
 		</style>
 	</head>
 	<body>
-		<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
-		<ul class="events">
-			<li>
-				<span aria-label="Upcoming show">🎟</span>
-				<time class="event-date" datetime="2019-09-19T21:30">September 19</time>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-			<li>
-				<span aria-label="Upcoming show">🎟</span>
-				<time class="event-date" datetime="2019-09-18T22:45">September 18</time>
-				<span class="event-description">Improv Playground</span>
-			</li>
-			<li>
-				<span aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-12">September 12</time>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-			<li>
-				<span aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-05">September 5</time>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-			<li>
-				<span aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-08-29">August 29</time>
-				<span class="event-description">King of the Mountain</span>
-			</li>
-		</ul>
-		<a class="call-to-action" href="https://embed.showclix.com/events/28912" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
+		<div class="bg">
+			<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
+			<ul class="events">
+				<li>
+					<span aria-label="Win">🏆</span>
+					<span class="event-date">August 29</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+				<li>
+					<span aria-label="Win">🏆</span>
+					<span class="event-date">September 5</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+				<li>
+					<span aria-label="Win">🏆</span>
+					<span class="event-date">September 12</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+				<li>
+					<span aria-label="Upcoming show">🎟</span>
+					<span class="event-date">September 19</span>
+					<span class="event-description">King of the Mountain</span>
+				</li>
+			</ul>
+			<a class="call-to-action" href="https://embed.showclix.com/event/king-of-the-mountain6xqEmQ9" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
+		</div>
 	</body>
 </html>
