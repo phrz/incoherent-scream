@@ -55,11 +55,20 @@
 			.events li {
 				display: block;
 				margin: 1em 0 0;
+				padding: 1em;
+				background: #000;
+			}
+			.event-date {
+				font-weight: bold;
+			}
+			.event-day {
+				font-size: 2em;
+			}
+			.event-day, .event-time, .event-description {
+				display: block;
 			}
 			.event-description {
-				color: rgba(255,255,255,0.65);
 				padding: 0 0.25em 0 0;
-				display: block;
 			}
 			.call-to-action {
 				font-weight: 800;
@@ -79,36 +88,36 @@
 			.arrow {
 				word-wrap: break-word;
 			}
-			@media only screen and (min-width: 600px) {
+			@media only screen and (min-width: 400px) {
 				/* reformat the events/awards section into a grid of icons, low-height */
 				.events {
 					display: grid;
 					margin: 2rem 0;
-					grid-template-columns: repeat(3, 150px);
-					grid-template-rows: repeat(2, 60px);
+					grid-template-columns: repeat(3, 120px);
+					grid-template-rows: repeat(2, 120px);
+					font-size: 0.8em;
 					grid-gap: 0.5rem 1rem;
 				}
 				.events li {
 					margin: 0;
+					display: flex;
+					flex-direction: column;
 				}
-				.event-date, .event-description {
-					display: block;
-				}
-				.event-icon {
-					font-size: 2rem;
-					float: left;
-					width: 40px;
-					height: 60px;
-					display: inline-flex;
-					align-items: center;
+				.event-description {
+					margin-top: auto;
 				}
 			}
-			@media only screen and (min-width: 1100px) {
+			@media only screen and (min-width: 900px) {
 				.events {
 					display: inline-grid;
 					padding: 0 10px;
-					vertical-align: bottom;
+					vertical-align: middle;
 					margin: 0;
+					grid-template-columns: repeat(3, 100px);
+					grid-template-rows: repeat(2, 100px);
+				}
+				.events li {
+					font-size: 0.83em;
 				}
 				/* reformat the call to action (buy tickets) button from a block
 				square button to a circle next to the hero text */
@@ -128,58 +137,39 @@
 					font-size: 1.5em;
 				}
 			}
-			@media only screen and (min-width: 1300px) {
-				.events {
-					grid-template-columns: repeat(3, 120px);
-					grid-template-rows: repeat(2, 80px);
-				}
-				.events li {
-					text-align: center;
-				}
-				.event-icon {
-					float: none;
-					display: block;
-					width: auto;
-					height: auto;
-				}
-				.event-description {
-					font-size: 0.7rem;
-				}
-			}
 		</style>
 	</head>
 	<body>
 		<h1 class="title" aria-label="Incoherent Scream">Incoher<br>entScre<br>am</h1>
 		<ul class="events">
 			<li>
-				<span class="event-icon" aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-08-29">August 29</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-11-04T20:00"><span class="event-day">Nov 4</span><span class="event-time">8:00PM</span></time>
+				<span class="event-description">Monday Improv</span>
 			</li>
+
 			<li>
-				<span class="event-icon" aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-05">September 5</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-11-13T21:45"><span class="event-day">Nov 13</span><span class="event-time">9:45PM</span></time>
+				<span class="event-description">Wednesday Improv</span>
 			</li>
+
 			<li>
-				<span class="event-icon" aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-12">September 12</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-11-24T13:00"><span class="event-day">Nov 24</span><span class="event-time">1:00PM</span></time>
+				<span class="event-description">Brunch Laughs</span>
 			</li>
+
 			<li>
-				<span class="event-icon" aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-19T21:30">September 19</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-12-01T13:00"><span class="event-day">Dec 1</span><span class="event-time">1:00PM</span></time>
+				<span class="event-description">Brunch Laughs</span>
 			</li>
+
 			<li>
-				<span class="event-icon" aria-label="Win">🏆</span>
-				<time class="event-date" datetime="2019-09-26T21:30">September 26</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-12-07T17:00"><span class="event-day">Dec 7</span><span class="event-time">5:00PM</span></time>
+				<span class="event-description">PG Improv</span>
 			</li>
+
 			<li>
-				<span class="event-icon" aria-label="Upcoming show">🎟</span>
-				<time class="event-date" datetime="2019-10-03T21:30">October 3</time>
-				<span class="event-description">King of the Mountain</span>
+				<time class="event-date" datetime="2019-12-30T19:00"><span class="event-day">Dec 30</span><span class="event-time">7:00PM</span></time>
+				<span class="event-description">Monday Funday</span>
 			</li>
 		</ul>
 		<a class="call-to-action" href="https://embed.showclix.com/events/28912" target="blank" aria-label="Buy Tickets"><span>Buy Tickets </span><span class="arrow">-></span></a>
